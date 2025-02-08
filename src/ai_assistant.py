@@ -24,7 +24,7 @@ class AI_Assistant:
         )
 
    
-    def monitor_user_discussion(self,message_history, user_recent_message):
+    def monitor_user_discussion(self,message_history: list, user_recent_message: str)-> str:
         try:
             if "heyai" in user_recent_message.replace(" ","").lower():
                 response = self.call_assistant(message_history, user_recent_message)

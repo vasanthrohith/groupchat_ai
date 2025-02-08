@@ -31,6 +31,7 @@ message_history = []
 async def websocket_endpoint(websocket: WebSocket, client_id: int):
     await manager.connect(websocket)
     ai_asnt = AI_Assistant()
+
     try:
         while True:
             data = await websocket.receive_text()
